@@ -1,8 +1,14 @@
 module.exports = {
   mode: 'jit',
-  content: ["./templates/**/*.{html,htm}"],
+  content: [
+    "./templates/**/*.html",
+    "./static/src/**/*.js",
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin")
+  ],
 }
