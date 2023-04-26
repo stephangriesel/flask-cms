@@ -1,4 +1,6 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
 from config import Config
 from content.blueprint import content
 from content.blueprint import static
@@ -11,3 +13,5 @@ app.register_blueprint(content, url_prefix='/content')
 
 app.register_blueprint(static, url_prefix='/static')
 # localhost:5050/static
+
+db = SQLAlchemy(app)
