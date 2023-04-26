@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Flask</title>
-    <link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet">
-</head>
+{% extends 'base.html' %}
 
-<body>
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <h1 class="text-3xl font-medium title-font text-red-900 mb-12 text-center">Hello</h1>
-  </div>
-</section>
-</body>
-</html>
+{% block title %}
+    Index Page
+{% endblock %}
+
+{% block content %}
+    <h1>Hello from index page</h1>
+{% endblock %}
